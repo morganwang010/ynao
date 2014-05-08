@@ -41,7 +41,7 @@
             <![endif]-->
     </head>
     <body>
-	<div><jsp:include page="header.jsp"></div>
+	<div><jsp:include page="./header.jsp"/></div>
         <!-- CloudStack widget content -->
         <div id="cloudStack3-container"></div>
         <!-- Templates -->
@@ -1390,6 +1390,7 @@
                                 </ul>
                             </div>
                         </li>
+						<!--
                         <li class="ip-addresses">
                             <table>
                                 <thead>
@@ -1415,6 +1416,7 @@
                                 </tbody>
                             </table>
                         </li>
+						-->
                     </ul>
                 </div>
             </div>

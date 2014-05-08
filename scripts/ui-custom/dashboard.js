@@ -33,6 +33,7 @@
                             var $elem = $dashboard.find('[data-item=' + key + ']');
 
                             // This assumes an array of data
+							 
                             if ($elem.is('ul')) {
                                 $elem.show();
                                 var $liTmpl = $elem.find('li').remove();
@@ -124,6 +125,8 @@
                                     }
                                 });
                             }
+							
+							 
                         });
                     }
                 }

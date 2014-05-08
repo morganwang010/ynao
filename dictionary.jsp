@@ -25,6 +25,7 @@ under the License.
 <% long now = System.currentTimeMillis(); %>
 <script type="text/javascript">
 dictionary = {
+'label.index.footer.record':'<fmt:message key="label.index.footer.record" />',
 'label.port': '<fmt:message key="label.port" />',
 'label.remove.ldap': '<fmt:message key="label.remove.ldap" />',
 'message.remove.ldap': '<fmt:message key="message.remove.ldap" />',

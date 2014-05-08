@@ -26,10 +26,12 @@
             } else if (isDomainAdmin()) {
                 sections = ["dashboard", "instances", "storage", "network", "templates", "accounts", "domains", "events", "projects", "regions", "affinityGroups"];
             } else if (g_userProjectsEnabled) {
-                sections = ["dashboard", "instances", "storage", "network", "templates", "accounts", "events", "projects", "regions", "affinityGroups"];
-            } else { //normal user
-                sections = ["dashboard", "instances", "storage", "network", "templates", "accounts", "events", "regions", "affinityGroups"];
-            }
+                //sections = ["dashboard", "instances", "storage", "network", "templates", "accounts", "events", "projects", "regions", "affinityGroups"];   // according the request from ChangHua Li, the user can only use instance,templates,accouts,storage,events,so comment the others.
+				sections = ["dashboard", "instances", "storage",   "templates", "accounts", "events", "regions"];
+            } else { //normal user  according the request from ChangHua Li, the user can only use instance,templates,accouts,storage,events,so comment the others.
+               // sections = ["dashboard", "instances", "storage", "network", "templates", "accounts", "events", "regions", "affinityGroups"]; //this is the origin sentence.
+            sections = ["dashboard", "instances", "storage",   "templates", "accounts", "events", "regions"];
+			}
 
             if (cloudStack.plugins.length) {
                 sections.push('plugins');
@@ -37,13 +39,14 @@
 
             return sections;
         },
+		
         sections: {
             /**
              * Dashboard
              */
             dashboard: {},
             instances: {},
-            affinityGroups: {},
+             affinityGroups: {},//root-admin only
             storage: {},
             network: {},
             templates: {},

@@ -237,11 +237,11 @@
             $userInfo.attr('title', userLabel);
 
             return [
-                $('<div>').addClass('logo'),
+             //   $('<div>').addClass('logo'),   //注释掉control行的logo---by morgan
                 $('<div>').addClass('controls')
-                .append($notificationArea)
-                .append($viewSwitcher)
-                .append($projectSelect)
+              //  .append($notificationArea)    //comment the notification  --by morgan
+				//.append($viewSwitcher)
+               // .append($projectSelect)
                 .append($userInfo)
             ];
         },
