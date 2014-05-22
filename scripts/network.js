@@ -3979,7 +3979,7 @@
                                                     virtualmachineid: args.itemData[0].id,
                                                     openfirewall: false
                                                 };
-                                                
+                                           //   alert("hi,catch you again!~~");
                                                 if (args.context.ipAddresses[0].isportable) {
                                                     var subselect = args.itemData[0]._subselect.split(',');
                                                     //var networkid = subselect[0];

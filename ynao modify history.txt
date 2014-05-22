@@ -1,0 +1,45 @@
+1,modify the /WEB-INF/class/resource/messages.properties, 
+	add the new lables, mainly the header and footer labes 
+	
+2,modify the /WEB-INF/class/resource/messages_zh_CN.properties
+	add the new labes, mainly the header add footer labes
+	
+3, modify the index.jsp
+	add the header file and footer file jsp
+	add the index.jsp title name  China-VO Cloud
+	
+	after uploading the header.jsp, there are some errors on the web.
+	
+4,uploading the file /u
+
+5，modify the ui/core.js,  comment the control div   line 240,
+6, modify the cloudstack3.css line 2259,,change the header.height to 13 to shorten the control banner
+7,  modify the cloudstack3.css line 4587,,change the .dashboard.user .vm-status top-margin to 5 to close to the breadcrumbs
+8, modify the cloudstack3.css line 2492,,change the #navigation ul padding-top to 5 to close to the breadcrumbs
+9, modify the header.jsp cloud link address to http://telescope.china-vo.org/cloud
+10, modify the cloustack.js to comment the some menus in user dashboard, at line 30 to 31
+11,modify the index.jsp line 1393 to 1419  to comment the network tables for user.
+12, modify cloudstack3.css 4697  dashboard-user events li width to 786px
+13,comment header in cloudstack3.css, and mistake commnet the .button at the same time, so the search style is wrong. Then remove the .button comment the search box style is right again.
+14,在/u/js/vo.js中添加logout的jquery代码,now you can logout from logout div in the header.jsp 
+15, remove the effect of the main-area box shadow in cloudstack3.css
+16, modify the u/css/vo.css, make the footer at the bottom of the page, at line 158, change the position to absolute, add bottom 0px.
+17,modify the cloudstack3.css line 66, change the height to 799px to suite the full screen
+18, modify the cloudstack3.css line 3349  and line 3376 
+19,modify the cloudstack3.css line 3349  and line 3473  add the div of home breadcrumbs
+20,modify the core.js line 261 to remove the home character.
+21,modify the cloudstack3.css line 3418 to remove the > character
+22,modify the cloudstac3.css line 2816 to add toolbar background of 4.0.2
+23,modify the instancewizard.js line 590 to remove the add network from the user wizard
+24,modify the index2.jsp, to fix the footer to the bottom of the web page, using the jquery
+25,modify the reset.css line 25, to make the global setting table have a fixed layout. avoid the table was expand with the content,add table-layout:fixed;
+26,modify the cloudstack.js line 106  to make the session expired to rediret to index2.jsp
+27,modify the ui/dialog.js line 816 to make the session expired to rediret to index2.jsp
+28,modify the user_ip_address table in mysql database, change the accout_id of the source_nat IP(public IP) to show the vm in the port forwarding function
+29,modify the ui/core.js line 253 to make the navigation ul content full the screen
+30,modify the cloudstack.js line 110 to make going to the login page when session is expired
+31,modify the ui/widget/notification.js to make the notification appeare at the right bottom corner.
+
+
+
+

@@ -48,10 +48,14 @@
 
             return $cornerAlert
                 .css({
-                    opacity: 0,
+                   // opacity: 0,   //commentto adjust the notification box at the right bottom corner--- by morgan 
                     position: 'absolute',
-                    top: $('#header .notifications').offset().top,
-                    left: $('#header .notifications').offset().left
+                //    top: $('#header .notifications').offset().top,
+               //     left: $('#header .notifications').offset().left
+			   
+			         //    top: $(document).height()-$cornerAlert.height(),
+					 bottom:'35px',
+          left: $(document).width() - $cornerAlert.width()
                 })
                 .animate({
                     opacity: 1

@@ -108,6 +108,7 @@
                         complete({
                             user: args.data.user
                         });
+						location.href="http://159.226.148.141:8080/client/index2.jsp";  //add this line to reload the index2.jsp, make the footer at the bottom of web page.
                     },
                     error: function(args) {
                         cloudStack.dialog.notice({

@@ -11,6 +11,7 @@
 </c:if>
 <fmt:setBundle basename="resources/messages"/>
 <link href="u/css/vo.css" rel="stylesheet" />
+  <script src="lib/jquery.js" type="text/javascript"></script>
 <script type="text/javascript" src="u/js/vo.js"></script>
 <script type="text/javascript">
 function changlanguage(name){

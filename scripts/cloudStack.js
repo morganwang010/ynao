@@ -102,11 +102,18 @@
                     return true;
                 } else {
                     var clickAction = function() {
+
+					 
                         $('#user-options a').eq(0).trigger('click');
+					//alert("my session is out expired~~~");// by morgan modify
+						  
+						document.location="http://159.226.148.141:8080/client/index2.jsp";//by morgan to redirect after the session expired
                     };
                     cloudStack.dialog.notice({
                         message: _l('label.session.expired'),
-                        clickAction: clickAction
+					//	alert("my session is out expired~~~");// by morgan modify
+                      clickAction: clickAction
+					  
                     });
                     return false;
                 }
@@ -403,9 +410,11 @@
                         $.cookie('timezoneoffset', null);
                         $.cookie('timezone', null);
                         $.cookie('supportELB', null);
-
+  alert("YOU WILL LOGOUT NOW but no transfer!~~~");
                         if (onLogoutCallback()) { //onLogoutCallback() will set g_loginResponse(single-sign-on variable) to null, then bypassLoginCheck() will show login screen.
-                            document.location.reload(); //when onLogoutCallback() returns true, reload the current document.
+                           // document.location.reload(); //when onLogoutCallback() returns true, reload the current document.
+						   alert("YOU WILL LOGOUT NOW!~~~");
+							document.location="http://159.226.148.141:8080/client/index2.jsp";  //by morgan to redirect after the session expired
                         }
                     },
                     error: function() {
