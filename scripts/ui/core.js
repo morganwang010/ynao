@@ -130,7 +130,6 @@
 
         return $navItem;
     };
-
     // Define page element generation fns
     var pageElems = {
         header: function(args) {
@@ -183,6 +182,7 @@
 
                     if ($target.closest('.select.project-view').size()) {
                         $('#cloudStack3-container').addClass('project-view');
+						
                         $projectSwitcher.addClass('alt');
                         $projectSwitcher.find('.select.project-view').addClass('active')
                             .siblings().removeClass('active');
@@ -239,17 +239,26 @@
             return [
              //   $('<div>').addClass('logo'),   //注释掉control行的logo---by morgan
                 $('<div>').addClass('controls')
-              //  .append($notificationArea)    //comment the notification  --by morgan
+              		 .append($notificationArea)    //comment the notification  --by morgan	  
 				//.append($viewSwitcher)
                // .append($projectSelect)
-                .append($userInfo)
+              //  .append($userInfo)
             ];
         },
-
+	
         'main-area': function(args) {
             var $navigation = $('<div>').attr({
                 id: 'navigation'
-            });
+				
+            }).css('height',function(){
+				if( $(document).height()<731)
+				{
+					return 731
+				}
+				else{
+					return ( $(document).height()-(85+35))
+				}
+			});   //add the css style to full the screen by morgan
             var $browser = $('<div>').attr({
                 id: 'browser'
             })
@@ -258,17 +267,37 @@
                     $('<div>').attr({
                         id: 'breadcrumbs'
                     })
-                    .append($('<div>').addClass('home').html(_l('label.home')))
+                   //.append($('<div>').addClass('home').html(_l('label.home')))  //将Home字符移除---by morgan
+				   .append($('<div>').addClass('home').html(_l(' '))) 
                     .append($('<div>').addClass('end'))
             )
 
             .append(
                 // Panel container
                 $('<div>').addClass('container')
-            );
+			
+            )
+	
+			.css('height',function(){
+				if( $(document).height()<731)
+				{
+					return 731
+				}
+				else{
+					return ( $(document).height()-(85+35))
+				}
+			});  //to make the main-area to full the screen add by morgan 
 
             makeNavigation(args).appendTo($navigation);
-
+$('#cloudStack3-container').css('height',function(){
+	if( $(document).height()<731)
+				{
+					return 731
+				}
+				else{
+					return ( $(document).height()-(85+35))
+				}
+});   //add the css style to full the screen by morgan
             return [
                 $navigation, $browser
             ];
@@ -282,7 +311,16 @@
                 'cloudStack-container': true
             })
             .data('cloudStack-args', args)
-            .appendTo(this);
+            .appendTo(this)
+			.css('height',function(){
+				if( $(document).height()<731)
+				{
+					return 731
+				}
+				else{
+					return ( $(document).height()-(85+35))
+				}
+			});  //to make the main-area to full the screen add by morgan 
         var context = args.context;
 
         // Create pageElems
@@ -394,6 +432,7 @@
         return this;
     };
 
+ 
     // Events
     $(function() {
         // Check if target should be hovered
@@ -482,6 +521,8 @@
 
             return true;
         });
+		
+		$('.VO-footer').css('visibility','visible');
     });
 })(window.jQuery,
     window.cloudStack ? window.cloudStack : window.cloudStack = {});

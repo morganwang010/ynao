@@ -582,16 +582,28 @@
                     },
 
                     'network': function($step, formData) {
-                        var showAddNetwork = true;
-
+				
+                    
+					//    var showAddNetwork = true;   //借用dashboard 判断管理员或用户的方法  by morgan
+					
+					
                         var checkShowAddNetwork = function($newNetwork) {
+							//以下增加管理员或用户的判断---by morgan
+					     var dashboardType = cloudStack.sections.dashboard.adminCheck({
+            context: cloudStack.context
+        }) ? 'admin' : 'user';
+		if(dashboardType=="admin")
+		{    var showAddNetwork = true;}
+		else{    var showAddNetwork = false;}
+						
                             if (!showAddNetwork) {
                                 $newNetwork.hide();
                             } else {
                                 $newNetwork.show();
                             }
                         };
-
+ 
+  
                         var originalValues = function(formData) {
                             // Default networks
                             $step.find('input[type=radio]').filter(function() {
@@ -617,8 +629,10 @@
                                 }).attr('checked', 'checked');
                             });
                         };
-
+ 
                         var $newNetwork = $step.find('.new-network');
+						  $newNetwork.hide();
+	/*用户不显示添加网络  注释掉此部分只是添加网络框点击不起作用，但仍显示--by morgan		   */  		  	
                         var $newNetworkCheckbox = $newNetwork.find('input[type=checkbox]');
 
                         // Setup new network field
@@ -634,7 +648,7 @@
                             }
                         });
 
-                        setTimeout(function() {
+                   setTimeout(function() {
                             var $checkbox = $step.find('.new-network input[type=checkbox]');
                             var $newNetwork = $checkbox.closest('.new-network');
 
@@ -650,7 +664,7 @@
 
                         // Show relevant conditional sub-step if present
                         $step.find('.wizard-step-conditional').hide();
-
+  $step.find('.select new-network').hide();
                         if ($.isFunction(args.showAddNetwork)) {
                             showAddNetwork = args.showAddNetwork({
                                 data: formData,
@@ -680,7 +694,10 @@
                                 }
                             } else {
                                 $step.find('.my-networks .select-container').removeClass('single-select');
-                                $addNetworkForm.show();
+                                //$addNetworkForm.show();  //注释掉此句以不显示添加网络。。
+								
+								    $addNetworkForm.hide();
+								
                                 checkShowAddNetwork($addNetworkForm);
                             }
 

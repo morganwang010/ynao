@@ -791,7 +791,14 @@
                 return true;
             var field = this;
             var $th = $('<th>').addClass(key).appendTo($thead.find('tr'));
-
+			
+			/*
+			//此处为表头-- by morgan
+			if(key=="endpoint")
+			{
+				alert("I got U ,haha!~~");
+			}
+			*/
             if ($th.index()) $th.addClass('reduced-hide');
 
             $th.html(_l(field.label));
@@ -1115,9 +1122,24 @@
                     createEditField($td).appendTo($td);
                 } else {
                     $td.html('');
+					
+					//to make the link to the url  by morgan
+					if(key=="endpoint")
+					{
+					 $td.append(
+                        $('<a></a>').attr('href',_s(content)).html(_s(content))
+                    
+					);
+				//	$('a').attr('href',_s(content));
+					}
+					else
+					{
                     $td.append(
                         $('<span></span>').html(_s(content))
-                    );
+                    
+					);
+					
+					}
                 }
 
                 $td.attr('title', _s(content));

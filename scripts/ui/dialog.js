@@ -813,6 +813,11 @@
                             $(this).dialog('destroy');
                             if (args.clickAction) args.clickAction();
                             $('.hovered-elem').hide();
+							//alert("you click the close button!~~");  //to check the dialog action after click the ok button!~~ by morgan
+							window.location.reload();
+							//location.href="http://159.226.148.141:8080/client/index2.jsp";  //add to redirect to the index2.jsp  -- by morgan
+							
+							
                         }
                     }]
                 });

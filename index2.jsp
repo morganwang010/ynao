@@ -39,8 +39,12 @@
         <!--[if IE 7]>
             <link type="text/css" rel="stylesheet" href="css/cloudstack3-ie7.css" />
             <![endif]-->
+		 
     </head>
+	
+
     <body>
+ 
 	<div><jsp:include page="./header.jsp"/></div>
         <!-- CloudStack widget content -->
         <div id="cloudStack3-container"></div>
@@ -299,6 +303,8 @@
                                             </tbody>
                                         </table>
                                     </div>
+									
+									
                                     <div class="select new-network">
                                         <table>
                                             <thead>
@@ -348,6 +354,9 @@
                                             </tbody>
                                         </table>
                                     </div>
+									
+									
+									
                                 </div>
                             </div>
                             <!-- Step 5c: Select security group -->
@@ -1635,7 +1644,9 @@
                 </div>
             </div>
         </div>
-	<div><jsp:include page="./footer.jsp"/></div>
+	 
+ <jsp:include page="./footer.jsp"/> 
+ 
         <!-- jQuery -->
         <script src="lib/jquery.js" type="text/javascript"></script>
         <script src="lib/jquery.easing.js" type="text/javascript"></script>
@@ -1731,5 +1742,34 @@
 
         <!-- localized messages -->
         <jsp:include page="dictionary.jsp" />
+		
+		
+			<script type="text/javascript"> 
+$(document).ready(function() 
+{ 
+/*
+alert($(window).height()); //浏览器当前窗口可视区域高度 
+alert($(document).width()); //浏览器当前窗口文档的高度 
+alert($(document.body).height());//浏览器当前窗口文档body的高度 
+alert($(document.body).outerHeight(true));//浏览器当前窗口文档body的总高度 包括border padding margin 
+alert($(window).width()); //浏览器当前窗口可视区域宽度 
+alert($(document).width());//浏览器当前窗口文档对象宽度 
+alert($(document.body).width());//浏览器当前窗口文档body的高度 
+alert($(document.body).outerWidth(true));//浏览器当前窗口文档body的总宽度 包括border padding margin
+*/
+var h1=$(document).height();
+	if(h1>852)
+	{
+	//$("#AutoFillToFitFullScreen").css("height", function() {return ($(document).height()-852);});
+	//$("#main-area").css("height", function() {return ($(document).height()-(85+35));});
+ //$("#cloudStack3-container").css("height", function() {return ($(document).height()-(85+35));});
+ 	//$("#container").css("height", function() {return ($(document).height()-(85+35));});
+	//alert("ok,ok222222!~");
+	}
+} 
+); 
+</script> 
+
+
     </body>
 </html>

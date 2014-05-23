@@ -783,6 +783,7 @@ var addGuestNetworkDialog = {
         // User Not authenticated
         if (XMLHttpResponse.status == ERROR_ACCESS_DENIED_DUE_TO_UNAUTHORIZED) {
             $("#dialog_session_expired").dialog("open");
+		//	alert("sesion outtime again");  //by morgan to test the session dialog
         } else if (XMLHttpResponse.status == ERROR_INTERNET_NAME_NOT_RESOLVED) {
             $("#dialog_error_internet_not_resolved").dialog("open");
         } else if (XMLHttpResponse.status == ERROR_INTERNET_CANNOT_CONNECT) {
