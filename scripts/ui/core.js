@@ -239,7 +239,7 @@
             return [
              //   $('<div>').addClass('logo'),   //注释掉control行的logo---by morgan
                 $('<div>').addClass('controls')
-              //  .append($notificationArea)    //comment the notification  --by morgan
+              		 .append($notificationArea)    //comment the notification  --by morgan	  
 				//.append($viewSwitcher)
                // .append($projectSelect)
               //  .append($userInfo)
@@ -275,7 +275,13 @@
             .append(
                 // Panel container
                 $('<div>').addClass('container')
+<<<<<<< HEAD
             )
+=======
+			
+            )
+	
+>>>>>>> 3102ae62da95300e5080243a93b69d8b4b7ae4a3
 			.css('height',function(){
 				if( $(document).height()<731)
 				{
@@ -520,7 +526,11 @@ $('#cloudStack3-container').css('height',function(){
             return true;
         });
 		
+<<<<<<< HEAD
 		$('.VO-footer').css('visibility','visible');//add this to show the footer after load the widget  by morgan..
+=======
+		$('.VO-footer').css('visibility','visible');
+>>>>>>> 3102ae62da95300e5080243a93b69d8b4b7ae4a3
     });
 })(window.jQuery,
     window.cloudStack ? window.cloudStack : window.cloudStack = {});

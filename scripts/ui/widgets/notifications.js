@@ -53,8 +53,12 @@
                 //    top: $('#header .notifications').offset().top,
                //     left: $('#header .notifications').offset().left
 			   
+<<<<<<< HEAD
 			         //    top: $(document).height()-$cornerAlert.height(),
 					 bottom:'35px',
+=======
+			             top: $(document).height()-$cornerAlert.height(),
+>>>>>>> 3102ae62da95300e5080243a93b69d8b4b7ae4a3
           left: $(document).width() - $cornerAlert.width()
                 })
                 .animate({
