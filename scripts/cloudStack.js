@@ -27,7 +27,7 @@
                 sections = ["dashboard", "instances", "storage", "network", "templates", "accounts", "domains", "events", "projects", "regions", "affinityGroups"];
             } else if (g_userProjectsEnabled) {
                 //sections = ["dashboard", "instances", "storage", "network", "templates", "accounts", "events", "projects", "regions", "affinityGroups"];   // according the request from ChangHua Li, the user can only use instance,templates,accouts,storage,events,so comment the others.
-				sections = ["dashboard", "instances", "storage",   "templates", "accounts", "events", "regions"];
+				sections = ["dashboard", "instances", "storage",   "templates", "events", "regions"];
             } else { //normal user  according the request from ChangHua Li, the user can only use instance,templates,accouts,storage,events,so comment the others.
                // sections = ["dashboard", "instances", "storage", "network", "templates", "accounts", "events", "regions", "affinityGroups"]; //this is the origin sentence.
             sections = ["dashboard", "instances", "storage",   "templates", "accounts", "events", "regions"];

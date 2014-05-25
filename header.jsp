@@ -6,7 +6,13 @@
 <c:if test="${empty cookie.locale}">
   <fmt:setLocale value="en" />
 </c:if>
+<c:if test="${empty cookie.lang}">
+  <fmt:setLocale value="en" />
+</c:if>
 <c:if test="${!empty cookie.locale}">
+  <fmt:setLocale value="${cookie.locale.value}" />
+</c:if>
+<c:if test="${!empty cookie.lang}">
   <fmt:setLocale value="${cookie.locale.value}" />
 </c:if>
 <fmt:setBundle basename="resources/messages"/>
@@ -18,12 +24,18 @@ function changlanguage(name){
 	if (name=="zh_CN"){
 		//document.getElementById("languagename").innerHTML='<fmt:message key="label.lang.chinese"/>';
 		//document.getElementById("languagemenu").style.display="none";
-                $.cookie('locale', name,{path:'/',domain: 'china-vo.org'});
+                $.cookie('locale', name); 
+				$.cookie('lang', name); 
+				//alert($.cookie('locale'));
+				//alert(name);
 		document.location.reload();
 	}else if (name=="en"){
 		//document.getElementById("languagename").innerHTML='<fmt:message key="label.lang.english"/>';
 		//document.getElementById("languagemenu").style.display="none";
-                $.cookie('locale', name,{path:'/',domain: 'china-vo.org'});
+                $.cookie('locale', name);
+				$.cookie('lang', name); 
+				//alert($.cookie('locale'));
+				//alert(name);
 		document.location.reload();
 	}else{		
 		//document.getElementById("languagemenu").style.display="block";

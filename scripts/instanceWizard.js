@@ -328,7 +328,7 @@
                     }
                 });
             },
-
+/*  comment by morgan to ignore step 5 
             // Step 5: Affinity
             function(args) {
                 $.ajax({
@@ -361,7 +361,7 @@
                     }
                 });
             },
-
+*/ //comment by morgan to ignore step 5 by morgan
             // Step 6: Network
             function(args) {
                 if (diskOfferingObjs != null && diskOfferingObjs.length > 0) {

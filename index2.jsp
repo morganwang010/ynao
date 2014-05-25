@@ -98,6 +98,7 @@
             </div>
             <!-- Instance wizard -->
             <div class="multi-wizard instance-wizard">
+			<!--
                 <div class="progress">
                     <ul>
                         <li class="first"><span class="number">1</span><span><fmt:message key="label.setup"/></span><span class="arrow"></span></li>
@@ -108,6 +109,24 @@
                         <li><span class="number">6</span><span><fmt:message key="label.menu.network"/></span><span class="arrow"></span></li>
                         <li class="last"><span class="number">7</span><span><fmt:message key="label.review"/></span></li>
                     </ul>
+                </div>
+				
+				-->
+				    <div class="progress">
+                    <ul>
+                        <li class="first"><span class="number">1</span><span><fmt:message key="label.setup"/></span><span class="arrow"></span></li>
+                        <li><span class="number">2</span><span class="multiline"><fmt:message key="label.select.a.template"/></span><span class="arrow"></span></li>
+                        <li><span class="number">3</span><span class="multiline"><fmt:message key="label.compute.offering"/></span><span class="arrow"></span></li>
+                        <li><span class="number">4</span><span class="multiline"><fmt:message key="label.disk.offering"/></span><span class="arrow"></span></li>
+						<!--   move the affinity group---  by morgan
+                        <li><span class="number">5</span><span><fmt:message key="label.affinity"/></span><span class="arrow"></span></li>
+                        <li><span class="number">6</span><span><fmt:message key="label.menu.network"/></span><span class="arrow"></span></li>
+                        <li class="last"><span class="number">7</span><span><fmt:message key="label.review"/></span></li>
+                   --> 
+					<li><span class="number">5</span><span><fmt:message key="label.menu.network"/></span><span class="arrow"></span></li>
+                        <li class="last"><span class="number">6</span><span><fmt:message key="label.review"/></span></li>
+                  <!--  -->
+					</ul>
                 </div>
                 <form>
                     <div class="steps">
@@ -257,14 +276,15 @@
                             </div>
                         </div>
 
-                        <!-- Step 5: Affinity groups -->
+                        <!-- Step 5: Affinity groups    comment by morgan to move the affinity group
                         <div class="step affinity" wizard-step-id="affinity">
                             <div class="content">
-                                <!-- Existing offerings -->
+							-->
+                                <!-- Existing offerings 
                                 <div class="select-container"></div>
                             </div>
                         </div>
-
+-->
                         <!-- Step 6: Network -->
                         <div class="step network always-load" wizard-step-id="network">
                             <!-- 5a: Network description -->

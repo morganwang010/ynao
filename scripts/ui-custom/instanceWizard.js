@@ -872,7 +872,12 @@
                 var showStep = function(index, options) {
                     if (!options) options = {};
                     var targetIndex = index - 1;
-
+					//add to disappear the step 4  by morgan
+					/*
+					if(targetIndex == 4)
+					{targetIndex=5;}
+					*/
+					//previous program make step 4 disappear  by morgan
                     if (index <= 1) targetIndex = 0;
                     if (targetIndex == $steps.size()) {
                         completeAction();

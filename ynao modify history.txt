@@ -39,6 +39,11 @@
 29,modify the ui/core.js line 253 to make the navigation ul content full the screen
 30,modify the cloudstack.js line 110 to make going to the login page when session is expired
 31,modify the ui/widget/notification.js to make the notification appeare at the right bottom corner.
+32,modify the header.jsp make the jquery to write the cookies to set the default language
+33,modify the messages.properties file ,to convert the chinese to unicode
+34,modify the instancewizard.js line 331 to ignore the step 5 
+35,modifyt the index2,jsp line 279 to 287 to ignore the step 5 
+
 
 
 
