@@ -2195,7 +2195,8 @@ div.detail-group.actions td {
 
 .detail-group table td.detail-actions.full-length {
   display: block;
-  width: 99%;
+/*  width: 99%;   to show the action button in one line--by morgan*/
+width:70%;
   float: left;
 }
 
@@ -2294,6 +2295,7 @@ div.detail-group.actions td {
   height:1px;
   background-size: auto, cover;
   position: relative;
+  visibility: hidden;
 }
 /*
 #header div.button {
@@ -3367,7 +3369,7 @@ div.toolbar div.section-switcher div.section-select label {
 /*Breadcrumbs*/
 div.toolbar div.filters {
   margin: 5px 0px 0 12px;
-  width: 168px;
+  width: 170px;
   float: left;
 }
 

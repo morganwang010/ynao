@@ -527,7 +527,7 @@ $('#cloudStack3-container').css('height',function(){
         });
 		
 <<<<<<< HEAD
-		$('.VO-footer').css('visibility','visible');//add this to show the footer after load the widget  by morgan..
+		$('.VO-footer').css('visibility':'visible','z-index':'100');//add this to show the footer after load the widget  by morgan..
 =======
 		$('.VO-footer').css('visibility','visible');
 >>>>>>> 3102ae62da95300e5080243a93b69d8b4b7ae4a3

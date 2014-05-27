@@ -105,7 +105,8 @@
         title: 'label.instances',
         id: 'instances',
         listView: {
-            multiSelect: true,
+            //multiSelect: true,  //comment to disappear the creat vm snapshot function by morgan
+			multiSelect: false,
             section: 'instances',
             filters: {
                 all: {
@@ -341,16 +342,21 @@
 
             detailView: {
                 name: 'Instance details',
-                viewAll: [{
+             viewAll: [ 
+			   {
                     path: 'storage.volumes',
                     label: 'label.volumes'
-                }, {
+                }, /*
+				   //comment the function to disappear the snapshots and affinity group by morgan
+				{
                     path: 'vmsnapshots',
                     label: 'label.snapshots'
                 }, {
                     path: 'affinityGroups',
                     label: 'label.affinity.groups'
-                }, {
+                }, 
+				*/
+				{
                     path: '_zone.hosts',
                     label: 'label.hosts',
                     preFilter: function(args) {
@@ -687,7 +693,8 @@
                     },
                     reset: {
                         label: 'Reset VM',
-                        textLabel: 'Reset VM',
+                     //   textLabel: 'Reset VM',
+						 compactLabel: 'label.restore',
                         messages: {
                             confirm: function(args) {
                                 return 'Do you want to restore the VM ?';
@@ -1732,6 +1739,8 @@
                             guestosid: {
                                 label: 'label.os.type',
                                 isEditable: true,
+								
+								 
                                 select: function(args) {
                                     $.ajax({
                                         url: createURL("listOsTypes"),
@@ -1752,6 +1761,8 @@
                                         }
                                     });
                                 }
+								
+								 
                             },
 
                             hypervisor: {
@@ -2194,8 +2205,11 @@
         } else if (jsonObj.state == 'Running') {
             allowedActions.push("stop");
             allowedActions.push("restart");
+			
+			/*
             if (jsonObj.hypervisor != 'KVM' || g_kvmsnapshotenabled == true)
                 allowedActions.push("snapshot");
+				*/  //commentto modify the details tab disappear the vm snapshot function by morgan 
             allowedActions.push("destroy");            
             allowedActions.push("reset");
              
@@ -2224,10 +2238,14 @@
             allowedActions.push("start");
             allowedActions.push("destroy");
             allowedActions.push("reset");
+			/*
             if (jsonObj.hypervisor != 'KVM' || g_kvmsnapshotenabled == true)
                 allowedActions.push("snapshot");
-            allowedActions.push("scaleUp");  //when vm is stopped, scaleUp is supported for all hypervisors 
-            allowedActions.push("changeAffinity");
+             allowedActions.push("changeAffinity");
+			  */  //comment to disenable snapshot function by morgan 
+			 
+			 allowedActions.push("scaleUp");  //when vm is stopped, scaleUp is supported for all hypervisors 
+           
 
             if (isAdmin())
                 allowedActions.push("migrateToAnotherStorage");

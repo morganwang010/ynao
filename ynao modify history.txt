@@ -43,6 +43,13 @@
 33,modify the messages.properties file ,to convert the chinese to unicode
 34,modify the instancewizard.js line 331 to ignore the step 5 
 35,modifyt the index2,jsp line 279 to 287 to ignore the step 5 
+36,modify the instance.js line 108 to disappear the multiselect vm to disable the vm snapshot function
+37,modify the instance.js line 349 to disappear the  vm snapshot function and affinity group
+38,modify the cloudstack3.css line 2199 to make the action button in one line
+39,modify the cloudstack3.css line 2289 to make the header notification disappear;
+40,modify the index2.jsp line 34 to set the default language
+41,modify the cloudstack3.css line 3372 to suit the filter select
+42,modify the core.js line 530 to make footer on the top layers
 
 
 
