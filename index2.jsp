@@ -29,14 +29,43 @@
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+	
+			<script type="text/javascript"> 
+$(document).ready(function() 
+{ 
+/*
+alert($(window).height()); //浏览器当前窗口可视区域高度 
+alert($(document).width()); //浏览器当前窗口文档的高度 
+alert($(document.body).height());//浏览器当前窗口文档body的高度 
+alert($(document.body).outerHeight(true));//浏览器当前窗口文档body的总高度 包括border padding margin 
+alert($(window).width()); //浏览器当前窗口可视区域宽度 
+alert($(document).width());//浏览器当前窗口文档对象宽度 
+alert($(document.body).width());//浏览器当前窗口文档body的高度 
+alert($(document.body).outerWidth(true));//浏览器当前窗口文档body的总宽度 包括border padding margin
+*/
+//alert($.cookie('locale'));
+  $.cookie('locale', 'en'); 
+				$.cookie('lang', 'en'); 
+var h1=$(document).height();
+	if(h1>852)
+	{
+	//$("#AutoFillToFitFullScreen").css("height", function() {return ($(document).height()-852);});
+	//$("#main-area").css("height", function() {return ($(document).height()-(85+35));});
+ //$("#cloudStack3-container").css("height", function() {return ($(document).height()-(85+35));});
+ 	//$("#container").css("height", function() {return ($(document).height()-(85+35));});
+	//alert("ok,ok222222!~");
+	}
+} 
+); 
+</script> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>China-VO Cloud</title>
         <link type="text/css" rel="stylesheet" href="lib/reset.css"/>
         <link type="text/css" rel="stylesheet" href="css/cloudstack3.css" />
-        <c:if test="${!empty cookie.lang && cookie.lang.value != 'en'}">
+     <!--   <c:if test="${!empty cookie.lang && cookie.lang.value != 'en'}">
             <link type="text/css" rel="stylesheet" href="css/cloudstack3.${cookie.lang.value}.css" />
         </c:if>
-        <!--[if IE 7]>
+        [if IE 7]>
             <link type="text/css" rel="stylesheet" href="css/cloudstack3-ie7.css" />
             <![endif]-->
 		 
@@ -1764,31 +1793,6 @@
         <jsp:include page="dictionary.jsp" />
 		
 		
-			<script type="text/javascript"> 
-$(document).ready(function() 
-{ 
-/*
-alert($(window).height()); //浏览器当前窗口可视区域高度 
-alert($(document).width()); //浏览器当前窗口文档的高度 
-alert($(document.body).height());//浏览器当前窗口文档body的高度 
-alert($(document.body).outerHeight(true));//浏览器当前窗口文档body的总高度 包括border padding margin 
-alert($(window).width()); //浏览器当前窗口可视区域宽度 
-alert($(document).width());//浏览器当前窗口文档对象宽度 
-alert($(document.body).width());//浏览器当前窗口文档body的高度 
-alert($(document.body).outerWidth(true));//浏览器当前窗口文档body的总宽度 包括border padding margin
-*/
-var h1=$(document).height();
-	if(h1>852)
-	{
-	//$("#AutoFillToFitFullScreen").css("height", function() {return ($(document).height()-852);});
-	//$("#main-area").css("height", function() {return ($(document).height()-(85+35));});
- //$("#cloudStack3-container").css("height", function() {return ($(document).height()-(85+35));});
- 	//$("#container").css("height", function() {return ($(document).height()-(85+35));});
-	//alert("ok,ok222222!~");
-	}
-} 
-); 
-</script> 
 
 
     </body>
